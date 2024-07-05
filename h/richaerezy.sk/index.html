@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richaerezy</title>
+    <link rel="shortcut icon" href="https://smilosweb.netlify.app/icon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #4CAF50; /* Zelená pozadie */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50; /* Zelená pozadie */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Tlačidlá do riadku */
+            justify-content: center; /* Tlačidlá na stred */
+        }
+
+        nav li {
+            margin: 0 10px; /* Vzdialenosť medzi tlačidlami */
+        }
+
+        nav a {
+            color: black; /* Čierna farba textu */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Zelená pozadie */
+            transition: background-color 0.3s ease; /* Prechod pri hover */
+        }
+
+        nav a:hover {
+            background-color: yellow; /* Žltá pri hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #banner img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            max-height: 400px; /* Nastaviť maximálnu výšku */
+            margin: 0 auto; /* Zarovnanie na stred */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Richaerezy (SW Hosting BETA)</h1> <!-- Názov webu -->
+        <nav>
+            <ul>
+                <li><a href="#">Domov</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="https://discord.gg/GV8TXw2nFh">Discord</a></li>
+                <li><a href="#">Sociálne siete</a></li>
+                <li><a href="#">Podpora</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="welcome">
+            <h1>Vitaj na našom webe!</h1>
+            <p>Web nie je hotový, no čoskoro ho spúštame!</p>
+            <div id="banner">
+                <img src="https://smilos71.github.io/smilosweb-testing/assets/6f2b1a25100fbde63c611561317a6ef2.gif" alt="Banner">
+            </div>
+        </div>
+    </main>
+    <footer>
+      <p> Hostováno pomocí <a href="https://smilosweb.netlify.app/" style="color: white;" target="_blank">SmilosWeb</a></p>
+    </footer>
+</body>
+</html>
+
