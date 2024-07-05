@@ -7,87 +7,105 @@
     <link rel="shortcut icon" href="https://smilosweb.netlify.app/icon.ico" type="image/x-icon">
     <style>
         body {
-            background-color: #4CAF50; /* Zelená pozadie */
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
+            background-image: url('https://th.bing.com/th/id/OIP.8Zhn2CU7j9MNapH7rU9xmAHaEo?rs=1&pid=ImgDetMain');
+            background-size: cover;
         }
-
-        header {
-            background-color: #4CAF50; /* Zelená pozadie */
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex; /* Tlačidlá do riadku */
-            justify-content: center; /* Tlačidlá na stred */
-        }
-
-        nav li {
-            margin: 0 10px; /* Vzdialenosť medzi tlačidlami */
-        }
-
-        nav a {
-            color: black; /* Čierna farba textu */
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #4CAF50; /* Zelená pozadie */
-            transition: background-color 0.3s ease; /* Prechod pri hover */
-        }
-
-        nav a:hover {
-            background-color: yellow; /* Žltá pri hover */
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        .loading-screen {
             position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            bottom: 0;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loading-text {
+            font-size: 20px;
+            color: black;
+        }
+        .container {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .welcome {
+            font-size: 24px;
+            color: black;
+            font-weight: bold;
+            cursor: text;
+        }
+        .under-construction {
+            font-size: 18px;
+            color: red;
+            cursor: text;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .button:hover {
+            background-color: lightblue;
+            transform: scale(1.05);
+        }
+        .no-zoom {
+            user-select: none;
         }
 
-        #banner img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            max-height: 400px; /* Nastaviť maximálnu výšku */
-            margin: 0 auto; /* Zarovnanie na stred */
-        }
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Richaerezy</h1> <!-- Názov webu -->
-        <nav>
-            <ul>
-                <li><a href="#">Domov</a></li>
-                <li><a href="#">O nás</a></li>
-                <li><a href="https://discord.gg/GV8TXw2nFh">Discord</a></li>
-                <li><a href="#">Sociálne siete</a></li>
-                <li><a href="#">Podpora</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="welcome">
-            <h1>Vitaj na našom webe!</h1>
-            <p>Web nie je hotový, no čoskoro ho spúštame!</p>
-            <div id="banner">
-                <img src="https://smilos71.github.io/smilosweb-testing/assets/6f2b1a25100fbde63c611561317a6ef2.gif" alt="Banner">
-            </div>
-        </div>
-    </main>
+    <div class="loading-screen">
+        <div class="loading-text">Načítavam...</div>
+    </div>
+    <div class="container">
+        <div class="welcome">Vitajte</div>
+        <div class="under-construction">Na webu ešte pracuje, no čoskoro to bude hotové! Nebojte, bude good!</div>
+        <div class="button">Discord</div>
+    </div>
     <footer>
-      <p> Hostováno pomocí <a href="https://smilosweb.netlify.app/" style="color: white;" target="_blank">SmilosWeb</a></p>
+      <p> Hostováno pomocí <a href="https://smilosweb.netlify.app/" style="color: black;" target="_blank">SmilosWeb</a></p>
     </footer>
+    <script>
+        const discordButton = document.querySelector('.button');
+        discordButton.addEventListener('click', () => {
+            window.location.href = 'https://discord.gg/GV8TXw2nFh';
+        });
+
+        // Skrytie načítavacej obrazovky po 1,5 sekundy
+        setTimeout(() => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.style.display = 'none';
+        }, 1500);
+    </script>
 </body>
 </html>
 
