@@ -89,8 +89,19 @@
 𝟭𝟬.    𝗦𝗽𝗼𝗹𝗲𝗰̌𝗲𝗻𝘀𝗸𝗲́ 𝗻𝗼𝗿𝗺𝘆: <br>
 •    🤝 𝗗𝗼𝗱𝗿𝘇̌𝘂𝗷𝘁𝗲 𝘇𝗮́𝗸𝗹𝗮𝗱𝗻𝗶́ 𝘀𝗽𝗼𝗹𝗲𝗰̌𝗲𝗻𝘀𝗸𝗲́ 𝗻𝗼𝗿𝗺𝘆 𝗮 𝗲𝘁𝗶𝗸𝗲𝘁𝘂.
     </div>
-    <footer>
-        Vytvořeno pomocí <a href="https://smilosweb.netlify.app/" style=color:white ="_blank">SmilosWeb</a>
-    </footer>
+    <div id="watermark" style="position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background-color: rgba(46, 49, 54, 0.8); color: white; padding: 10px 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 9999; animation: float 3s ease-in-out infinite; opacity: 0.9;">
+        <p>Vytvořeno pomocí <a href="https://smilosweb.netlify.app/" style="color: white; text-decoration: underline;" target="_blank">SmilosWeb</a></p>
+    </div>
+
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -10px);
+            }
+        }
+    </style>
 </body>
 </html>
