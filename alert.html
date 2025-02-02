@@ -1,0 +1,49 @@
+<!-- alert.html -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upozornění</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 2rem;
+        }
+        .alert-container {
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .cancel-button {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-container">
+        <h1>SmilosWeb je zastaralý</h1>
+        <p>Pokračujte na nový web nebo přejděte na GrapeHost.</p>
+        <button onclick="window.location.href='https://grapehost.com'">Přejít na GrapeHost</button>
+        <button class="cancel-button" onclick="window.location.href=document.referrer">Pokračovat</button>
+    </div>
+</body>
+</html>
