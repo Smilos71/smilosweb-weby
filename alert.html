@@ -1,4 +1,3 @@
-<!-- alert.html -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -43,7 +42,15 @@
         <h1>SmilosWeb je zastaralý</h1>
         <p>Pokračujte na nový web nebo přejděte na GrapeHost.</p>
         <button onclick="window.location.href='https://grapehost.com'">Přejít na GrapeHost</button>
-        <button class="cancel-button" onclick="window.location.href=document.referrer">Pokračovat</button>
+        <button class="cancel-button">Pokračovat</button>
     </div>
+
+    <script>
+        document.querySelector('.cancel-button').addEventListener('click', function() {
+            // Přejít na předchozí stránku nebo na správnou stránku
+            window.location.href = document.referrer || '/index.html'; // Pokud není referrer, přejdi na /index.html
+        });
+    </script>
 </body>
 </html>
+
